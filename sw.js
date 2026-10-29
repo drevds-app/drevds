@@ -1,8 +1,8 @@
 // DREV DS service worker – gjør appen tilgjengelig uten nett.
 // Ved ny versjon: endre VERSION, så henter telefonene alle filene på nytt.
-const VERSION = "2.0";
+const VERSION = "2.1";
 const CACHE = "drevds-" + VERSION;
-const ASSETS = ["./", "index.html", "manifest.webmanifest", "fonts/fonts.css", "lib/jspdf.umd.min.js", "lib/jspdf.plugin.autotable.min.js", "fonts/barlow-latin-400-normal.woff2", "fonts/barlow-latin-500-normal.woff2", "fonts/barlow-latin-600-normal.woff2", "fonts/barlow-condensed-latin-500-normal.woff2", "fonts/barlow-condensed-latin-600-normal.woff2", "fonts/barlow-condensed-latin-700-normal.woff2", "icons/apple-touch-icon.png", "icons/favicon-16.png", "icons/favicon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "docs/drevproveregler-2026-2031.pdf", "docs/veileder-dommere-med-kandidater.pdf", "docs/veileder-hundepeiler.pdf"];
+const ASSETS = ["./", "index.html", "manifest.webmanifest", "fonts/fonts.css", "lib/jspdf.umd.min.js", "lib/jspdf.plugin.autotable.min.js", "lib/pdf.min.js", "lib/pdf.worker.min.js", "fonts/barlow-latin-400-normal.woff2", "fonts/barlow-latin-500-normal.woff2", "fonts/barlow-latin-600-normal.woff2", "fonts/barlow-condensed-latin-500-normal.woff2", "fonts/barlow-condensed-latin-600-normal.woff2", "fonts/barlow-condensed-latin-700-normal.woff2", "icons/apple-touch-icon.png", "icons/favicon-16.png", "icons/favicon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "docs/drevproveregler-2026-2031.pdf", "docs/veileder-dommere-med-kandidater.pdf", "docs/veileder-hundepeiler.pdf"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE)
