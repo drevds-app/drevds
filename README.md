@@ -1,6 +1,6 @@
 # DREV DS
 
-Digitalt Skogskort for drevprøve på dachshund (NKK 2026–2031). Versjon 3.0.
+Digitalt Skogskort for drevprøve på dachshund (NKK 2026–2031). Versjon 3.3.
 
 Appen er en PWA (Progressive Web App). Åpne adressen i Safari på iPhone og velg
 Del → «Legg til på Hjem-skjerm». Etter første åpning virker den uten nett.
